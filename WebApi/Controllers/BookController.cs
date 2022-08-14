@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 using WebApi.BookOperaitons.CreateBook;
 using WebApi.BookOperaitons.DeleteBook;
 using WebApi.BookOperaitons.GetBooks;
+using WebApi.BookOperaitons.GetById;
 using WebApi.BookOperaitons.UpdateBook;
 using WebApi.DbOperations;
 using static WebApi.BookOperaitons.CreateBook.CreateBookCommand;
+using static WebApi.BookOperaitons.GetById.GetBookDetailQuery;
 using static WebApi.BookOperaitons.UpdateBook.UpdateBookCommand;
 
 namespace WebApi.AddControllers
@@ -54,9 +56,21 @@ namespace WebApi.AddControllers
             return Ok(result);
         }
         [HttpGet("{id}")]
-        public Book GetById(int id)
+        public IActionResult GetById(int id)
         {
-            return appDbContext.Books.Where(a => a.Id == id).SingleOrDefault();
+            BookDetailVM result;
+           GetBookDetailQuery query= new GetBookDetailQuery(appDbContext);
+            try
+            {
+                
+           query.BookId=id;
+           result=query.Handle();
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(result);
         }
         //Post
         [HttpPost]
