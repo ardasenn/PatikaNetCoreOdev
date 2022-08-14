@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.BookOperaitons.CreateBook;
 using WebApi.BookOperaitons.DeleteBook;
@@ -67,6 +69,8 @@ namespace WebApi.AddControllers
             {
                 
            query.BookId=id;
+           GetBookDetailQueryValidator val= new GetBookDetailQueryValidator();
+           val.ValidateAndThrow(query);
            result=query.Handle();
             }
             catch (System.Exception ex)
@@ -83,7 +87,18 @@ namespace WebApi.AddControllers
             try
             {
                 command.Model = newBook;
+                CreateBookCommandValidator validator=new CreateBookCommandValidator();
+                validator.ValidateAndThrow(command);
+                // if(!result.IsValid){
+                //     foreach (var item in result.Errors)
+                //     {
+                //         Console.WriteLine("ÖZellik" + item.PropertyName+" - error Message: "+item.ErrorMessage);
+                //     }
+                    
+                // }
+                // else
                 command.Handle();
+
             }
             catch (System.Exception ex)
             {
@@ -97,7 +112,9 @@ namespace WebApi.AddControllers
             UpdateBookCommand command = new UpdateBookCommand(appDbContext);
             try
             {
+                UpdateBookCommandValidator val= new UpdateBookCommandValidator();
                 command.Model = updatedBook;
+                val.ValidateAndThrow(command);
                 command.Handle(id);
             }
             catch (System.Exception ex)
