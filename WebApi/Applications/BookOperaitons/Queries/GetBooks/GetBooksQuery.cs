@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DbOperations;
 
@@ -20,7 +21,7 @@ namespace WebApi.BookOperaitons.GetBooks
         }
         public List<BooksViewModel>  Handle()
         {
-          var booklist= appDbContext.Books.OrderBy(a=>a.Id).ToList();
+          var booklist= appDbContext.Books.Include(a => a.Genre).OrderBy(a=>a.Id).ToList();
           List<BooksViewModel>vm=mapper.Map<List<BooksViewModel>>(booklist); //new List<BooksViewModel>();
         //   foreach (var item in booklist)
         //   {

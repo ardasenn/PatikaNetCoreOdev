@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DbOperations;
 
@@ -21,7 +22,7 @@ namespace WebApi.BookOperaitons.GetById
         }
         public BookDetailVM Handle()
         {
-            var book= dbContext.Books.Where(a => a.Id == BookId).SingleOrDefault();
+            var book= dbContext.Books.Include(a=>a.Genre).Where(a => a.Id == BookId).SingleOrDefault();
             if(book is null) throw new InvalidOperationException("böyle bir kitap zaten yok len");
             BookDetailVM vm= mapper.Map<BookDetailVM>(book); //new BookDetailVM();
             // vm.Title=book.Title;

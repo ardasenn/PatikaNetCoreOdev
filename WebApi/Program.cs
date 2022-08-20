@@ -21,6 +21,7 @@ namespace WebApi
             var services= scope.ServiceProvider;
             DataGenerator.Initialize(services);
            }
+           host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
