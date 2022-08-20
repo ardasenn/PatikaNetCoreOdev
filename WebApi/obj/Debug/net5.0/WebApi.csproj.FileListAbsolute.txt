@@ -39,3 +39,6 @@ D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\obj\Debug\net5.0\refint
 D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\obj\Debug\net5.0\ref\WebApi.dll
+D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ARDA D\Arda\YAZILIM\NetCorePatikaIle\BookStore\WebApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
