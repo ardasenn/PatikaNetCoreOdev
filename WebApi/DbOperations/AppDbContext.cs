@@ -3,7 +3,7 @@ using WebApi.Entities;
 
 namespace WebApi.DbOperations
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext, IAppDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> db) :base(db)
         {
@@ -14,5 +14,9 @@ namespace WebApi.DbOperations
         public DbSet<Genre> Genres {get; set;}
         public DbSet<Author> Authors {get; set;}
 
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
     }
 }

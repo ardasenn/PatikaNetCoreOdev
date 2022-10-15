@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Tests",
+    "\\Tests\\WebApi.UnitTests",
+    "\\Tests\\WebApi.UnitTests\\Application",
+    "\\Tests\\WebApi.UnitTests\\Application\\BookOperations",
+    "\\Tests\\WebApi.UnitTests\\Application\\BookOperations\\Commands",
+    "\\Tests\\WebApi.UnitTests\\Application\\BookOperations\\Commands\\CreateBook",
+    "\\WebApi"
+  ],
+  "SelectedNode": "\\WebApi\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -9,15 +9,16 @@ namespace WebApi.BookOperaitons.DeleteBook
 {
     public class DeleteBookCommand
     {
-        private readonly AppDbContext dbContext;
+        public int Id { get; set; }
+        private readonly IAppDbContext dbContext;
 
-        public DeleteBookCommand(AppDbContext dbContext)
+        public DeleteBookCommand(IAppDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
-        public void Handle(int id)
+        public void Handle()
         {
-              var book = dbContext.Books.SingleOrDefault(a=>a.Id == id);
+              var book = dbContext.Books.SingleOrDefault(a=>a.Id == Id);
              if(book is  null) throw new InvalidOperationException("Böyle bir kitap yok zaten eşşek");
              dbContext.Books.Remove(book); 
              dbContext.SaveChanges();

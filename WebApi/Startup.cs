@@ -40,6 +40,7 @@ namespace WebApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
             });
             services.AddDbContext<AppDbContext>(options=>options.UseInMemoryDatabase(databaseName:"BookStoreDb"));
+            services.AddScoped<IAppDbContext>(provider => provider.GetService<AppDbContext>());//bunu araþtýr bakalým neymiþ
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddSingleton<ILoggerService, ConsoleLogger>();          
 

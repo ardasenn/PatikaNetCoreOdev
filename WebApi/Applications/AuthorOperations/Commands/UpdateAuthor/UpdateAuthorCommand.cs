@@ -8,11 +8,11 @@ namespace WebApi.Applications.AuthorOperations.Commands.UpdateAuthor
 {
     public class UpdateAuthorCommand
     {
-        private readonly AppDbContext dbContext;
+        private readonly IAppDbContext dbContext;
         private readonly IMapper mapper;
         public int Id { get; set; }
         public UpdateAuthorCommandModel Model { get; set; }
-        public UpdateAuthorCommand(AppDbContext dbContext, IMapper mapper)
+        public UpdateAuthorCommand(IAppDbContext dbContext, IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

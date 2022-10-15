@@ -7,11 +7,11 @@ namespace WebApi.Applications.GenreOperations.Commands.UpdateGenre
 {
     public class UpdateGenreCommand
     {
-        private readonly AppDbContext db;
+        private readonly IAppDbContext db;
 
         public UpdateGenreModel Model { get; set; }
         public int GenreId { get; set; }
-        public UpdateGenreCommand(AppDbContext db, int genreId)
+        public UpdateGenreCommand(IAppDbContext db, int genreId)
         {
             this.db = db;
             GenreId = genreId;
@@ -25,7 +25,7 @@ namespace WebApi.Applications.GenreOperations.Commands.UpdateGenre
                 throw new InvalidOperationException("Aynı isimli bir kitap türü zaten mevcut");
             genre.Name = Model.Name.Trim() == string.Empty ? genre.Name : Model.Name; // boş gelrise var adını yazdır
             genre.IsActive=Model.IsActive;
-            db.Update(genre);
+            db.Genres.Update(genre);
             db.SaveChanges();
         }
     }
