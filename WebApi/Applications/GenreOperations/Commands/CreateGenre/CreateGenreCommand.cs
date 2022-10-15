@@ -7,10 +7,10 @@ namespace WebApi.Applications.GenreOperations.Commands.CreateGenre
 {
     public class CreateGenreCommand
     {
-        private readonly AppDbContext db;
+        private readonly IAppDbContext db;
 
         public CreateGenreModel Model { get; set; }
-        public CreateGenreCommand(AppDbContext db)
+        public CreateGenreCommand(IAppDbContext db)
         {
             
             this.db = db;
@@ -23,7 +23,7 @@ namespace WebApi.Applications.GenreOperations.Commands.CreateGenre
 
             genre = new Genre();
             genre.Name = Model.Name;
-            db.Add(genre);
+            db.Genres.Add(genre);
             db.SaveChanges();
         }
     }

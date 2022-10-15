@@ -5,9 +5,9 @@ namespace WebApi.Applications.AuthorOperations.Commands.DeleteAuthor
 {
     public class DeleteAuthorCommand
     {
-        private readonly AppDbContext dbContext;
+        private readonly IAppDbContext dbContext;
         public int Id { get; set; } 
-        public DeleteAuthorCommand(AppDbContext dbContext)
+        public DeleteAuthorCommand(IAppDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

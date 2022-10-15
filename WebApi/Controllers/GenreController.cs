@@ -15,10 +15,10 @@ namespace WebApi.Controllers
     [ApiController]
     public class GenreController : ControllerBase
     {
-        private readonly AppDbContext dbContext;
+        private readonly IAppDbContext dbContext;
         private readonly IMapper mapper;
 
-        public GenreController(AppDbContext dbContext,IMapper mapper)
+        public GenreController(IAppDbContext dbContext,IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

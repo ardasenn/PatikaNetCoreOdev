@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ARDA D\\Arda\\YAZILIM\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj": {}
+    "D:\\ARDA D\\Arda\\YAZILIM\\Patika\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\ARDA D\\Arda\\YAZILIM\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj": {
+    "D:\\ARDA D\\Arda\\YAZILIM\\Patika\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ARDA D\\Arda\\YAZILIM\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\ARDA D\\Arda\\YAZILIM\\Patika\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\ARDA D\\Arda\\YAZILIM\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "D:\\ARDA D\\Arda\\YAZILIM\\Patika\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\Arda\\.nuget\\packages\\",
-        "outputPath": "D:\\ARDA D\\Arda\\YAZILIM\\NetCorePatikaIle\\BookStore\\WebApi\\obj\\",
+        "outputPath": "D:\\ARDA D\\Arda\\YAZILIM\\Patika\\NetCorePatikaIle\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Arda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -79,7 +79,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -91,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

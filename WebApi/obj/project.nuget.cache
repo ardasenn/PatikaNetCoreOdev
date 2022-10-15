@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ChwUWN6Wu6LUkZnv/F84ueKc2R1GaoQ4ox0d9sjl1XLaGZ9e4AG9o5s1uOlXWQlWogGLptDzXMYoJQtfmQR2sQ==",
+  "dgSpecHash": "WRocFN0NGHSCES+gkAdg2bsoeT5hutesa9zFeEHy9bq5056iTOsYwgqJW8s4nuLoENDvrdkuKfPMIRzcQ+Lc6Q==",
   "success": true,
-  "projectFilePath": "D:\\ARDA D\\Arda\\YAZILIM\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj",
+  "projectFilePath": "D:\\ARDA D\\Arda\\YAZILIM\\Patika\\NetCorePatikaIle\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arda\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Arda\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

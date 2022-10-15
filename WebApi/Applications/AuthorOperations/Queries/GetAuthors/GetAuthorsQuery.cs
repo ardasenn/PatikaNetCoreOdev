@@ -10,10 +10,10 @@ namespace WebApi.Applications.AuthorOperations.Queries.GetAuthors
 {
     public class GetAuthorsQuery
     {
-        private readonly AppDbContext dbContext;
+        private readonly IAppDbContext dbContext;
         private readonly IMapper mapper;
 
-        public GetAuthorsQuery(AppDbContext dbContext,IMapper mapper)
+        public GetAuthorsQuery(IAppDbContext dbContext,IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

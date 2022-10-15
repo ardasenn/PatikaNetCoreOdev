@@ -9,6 +9,7 @@ using WebApi.BookOperaitons.GetBooks;
 using WebApi.Entities;
 using static WebApi.BookOperaitons.CreateBook.CreateBookCommand;
 using static WebApi.BookOperaitons.GetById.GetBookDetailQuery;
+using static WebApi.BookOperaitons.UpdateBook.UpdateBookCommand;
 
 namespace WebApi.Common
 {
@@ -19,6 +20,7 @@ namespace WebApi.Common
             CreateMap<CreateBookModel, Book>();
             CreateMap<Book, BookDetailVM>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
             CreateMap<Book, BooksViewModel>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));//BooksViewModel içerisindeki genreyi şu şekilde maple diyoruz. Map from enyden maplicez nasıl yapıcaz :)
+            CreateMap<Book, UpdateBookModel>().ReverseMap();
             CreateMap<Genre, GenresViewModel>();
             CreateMap<Genre, GenreDetailViewModel>();
             CreateMap<Author, GetAuthorsQueryModel>();

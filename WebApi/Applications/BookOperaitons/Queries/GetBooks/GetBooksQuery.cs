@@ -11,10 +11,10 @@ namespace WebApi.BookOperaitons.GetBooks
 {
     public class GetBooksQuery
     {
-        private readonly AppDbContext appDbContext;
+        private readonly IAppDbContext appDbContext;
         private readonly IMapper mapper;
 
-        public GetBooksQuery(AppDbContext appDbContext,IMapper mapper)
+        public GetBooksQuery(IAppDbContext appDbContext,IMapper mapper)
         {
             this.appDbContext = appDbContext;
             this.mapper = mapper;

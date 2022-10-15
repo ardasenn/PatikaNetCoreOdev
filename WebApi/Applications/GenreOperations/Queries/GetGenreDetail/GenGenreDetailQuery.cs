@@ -7,11 +7,11 @@ namespace WebApi.Applications.GenreOperations.Queries.GetGenreDetail
 {
     public class GenGenreDetailQuery
     {
-        private readonly AppDbContext appDbContext;
+        private readonly IAppDbContext appDbContext;
         private readonly IMapper mapper;
         public int GenreId { get; set; }
 
-        public GenGenreDetailQuery(AppDbContext appDbContext, IMapper mapper)
+        public GenGenreDetailQuery(IAppDbContext appDbContext, IMapper mapper)
         {
             this.appDbContext = appDbContext;
             this.mapper = mapper;

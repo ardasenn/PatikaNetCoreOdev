@@ -6,10 +6,10 @@ namespace WebApi.Applications.GenreOperations.Commands.DeleteGenre
 {
     public class DeleteGenreCommand
     {
-        private readonly AppDbContext db;
+        private readonly IAppDbContext db;
 
         public int GenreId { get; set; }
-        public DeleteGenreCommand(AppDbContext db)
+        public DeleteGenreCommand(IAppDbContext db)
         {
             this.db = db;
         }
